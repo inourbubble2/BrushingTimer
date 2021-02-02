@@ -45,12 +45,12 @@
         android:id="@+id/textViewGuide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center_horizontal"
         android:text="양치를 시작하세요!"
         android:textAlignment="center"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTimer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

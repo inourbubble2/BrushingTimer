@@ -48,21 +48,21 @@ class MainActivity : AppCompatActivity() {
 
             runOnUiThread {
                 textViewTimer.text = "$sec:$milli"
-                if(sec == 0 || sec % 30 == 0) {
+                if(sec == 0 || sec % 10 == 0) {
                     when (sec) {
                         0 -> {
                             textViewGuide.text = "어금니 씹는면을 닦아주세요."
                         }
-                        30 -> {
+                        40 -> {
                             textViewGuide.text = "어금니의 안쪽을 닦아주세요."
                         }
-                        60 -> {
+                        80 -> {
                             textViewGuide.text = "어금니의 바깥쪽을 닦아주세요."
                         }
-                        90 -> {
+                        110 -> {
                             textViewGuide.text = "앞니의 안쪽을 닦아주세요."
                         }
-                        120 -> {
+                        130 -> {
                             textViewGuide.text = "앞니의 바깥쪽을 닦아주세요."
                         }
                         150 -> {
