@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Brushing Timer</string>
+    <string name="start_brushing">양치를 시작하세요!</string>
 </resources>

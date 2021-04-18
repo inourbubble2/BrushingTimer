@@ -3,6 +3,7 @@ package com.example.brushingtimer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import java.util.*
 
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private var timerTask: Timer? = null
     private var index :Int = 1
 
-    private lateinit var textViewTimer : TextView
+    private lateinit var progressBar : ProgressBar
     private lateinit var textViewGuide : TextView
     private lateinit var btnControl : Button
     private lateinit var btnReset : Button
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        textViewTimer = findViewById(R.id.textViewTimer)
+        progressBar = findViewById(R.id.progressBar)
         btnControl = findViewById(R.id.btnControl)
         btnReset = findViewById(R.id.btnReset)
         textViewGuide = findViewById(R.id.textViewGuide)
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             val milli = time % 100
 
             runOnUiThread {
-                textViewTimer.text = "$sec:$milli"
+                progressBar.progress = sec
                 if(sec == 0 || sec % 10 == 0) {
                     when (sec) {
                         0 -> {
@@ -89,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
         time = 0
         isRunning = false
-        textViewTimer.text = "0:00"
+        progressBar.progress = 0
         textViewGuide.text = "양치를 시작하세요!"
 
         index = 1
